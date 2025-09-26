@@ -1,0 +1,23 @@
+{
+    "name": "@rnmonorepo/workspace",
+    "packageManager": "yarn@4.5.0",
+    "version": "0.1.0",
+    "description": "Sample project for React Native monorepo using Yarn workspaces",
+    "license": "MIT-0",
+    "scripts": {
+        "pods": "yarn workspaces foreach --all run pods",
+        "clean": "yarn workspaces foreach --all run clean ; rm -rf node_modules ",
+        "ios:m": "yarn workspace @rnmonorepo/mobile run ios --port 8081",
+        "ios:tv": "yarn workspace @rnmonorepo/tvos run ios --simulator \"Apple TV\" --port 8082",
+        "android:m": "yarn workspace @rnmonorepo/mobile run android --port 8081",
+        "android:tv": "yarn workspace @rnmonorepo/tvos run android --port 8082",
+        "vega": "yarn workspace @rnmonorepo/vega run build:release",
+        "vega:debug": "yarn workspace @rnmonorepo/vega run build:debug"
+    },
+    "workspaces": [
+        "shared",
+        "mobile",
+        "tvos",
+        "vega"
+    ]
+}

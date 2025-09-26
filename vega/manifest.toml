@@ -1,0 +1,18 @@
+#
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+#
+schema-version = 1
+
+[package]
+title = "Sample App for React Native monorepo using Yarn workspaces"
+version = "0.1.0"
+id = "com.amazondeveloper.monoreposample"
+icon = "@image/MonorepoApp.png"
+
+[components]
+[[components.interactive]]
+id = "com.amazondeveloper.monoreposample.main"
+runtime-module = "/com.amazon.kepler.keplerscript.runtime.loader_2@IKeplerScript_2_0"
+launch-type = "singleton"
+categories = ["com.amazon.category.main"]

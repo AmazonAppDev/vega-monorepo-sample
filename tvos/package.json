@@ -1,0 +1,50 @@
+{
+  "name": "@rnmonorepo/tvos",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf android/.gradle android/build android/app/.cxx android/app/build ios/build ios/Pods node_modules",
+    "pods": "cd ios && pod install && cd ..",
+    "android": "TV=1 react-native run-android",
+    "ios": "TV=1 react-native run-ios",
+    "lint": "npx eslint@8 src --ext .ts,.tsx",
+    "format": "npx prettier --write src",
+    "format:check": "npx prettier --check src",
+    "start": "TV=1 react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-navigation/drawer": "^6.7.2",
+    "@react-navigation/native": "^6.1.18",
+    "@rnmonorepo/shared": "*",
+    "react": "18.3.1",
+    "react-native": "npm:react-native-tvos@0.76.0-0",
+    "react-native-gesture-handler": "^2.20.2",
+    "react-native-reanimated": "^3.16.1",
+    "react-native-safe-area-context": "^4.14.0",
+    "react-native-screens": "^3.35.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "15.0.0-alpha.2",
+    "@react-native-community/cli-platform-android": "15.0.0-alpha.2",
+    "@react-native-community/cli-platform-ios": "15.0.0-alpha.2",
+    "@react-native/babel-preset": "0.76.0-rc.6",
+    "@react-native/eslint-config": "0.76.0-rc.6",
+    "@react-native/metro-config": "0.76.0-rc.6",
+    "@react-native/typescript-config": "0.76.0-rc.6",
+    "@types/react": "^18.2.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.6.3",
+    "eslint": "^8.19.0",
+    "jest": "^29.6.3",
+    "prettier": "2.8.8",
+    "react-test-renderer": "18.3.1",
+    "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
