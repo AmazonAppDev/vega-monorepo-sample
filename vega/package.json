@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@amazon-devices/kepler-cli-platform": "^0",
-    "@react-native-community/cli": "11.3.2",
+    "@react-native-community/cli": "20.0.0",
     "@react-native/eslint-config": "0.72.2",
     "@react-native/metro-config": "^0.72.6",
     "@testing-library/react-native": "^7.2.0",
