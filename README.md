@@ -1,8 +1,10 @@
-# React Native Monorepo Sample App
+React Native Monorepo Sample App
+================================
 
 The React Native Monorepo Sample App shows you how to create an app that runs on multiple platforms and devices using Yarn workspaces, including the Vega OS Fire TV Stick. The following table shows you what platforms this app is designed to run on.
 
-## Introduction
+Introduction
+------------
 
 The React Native Monorepo Sample App runs on the following platforms and devices. 
 
@@ -12,6 +14,29 @@ The React Native Monorepo Sample App runs on the following platforms and devices
 | **React Native Core** | Android and iOS Mobile |
 | **React Native for TvOS** | Android TV and Apple TV |
 | **React Native for MacOS** | Native MacOS |
+
+
+### Example screens of the React Native Monorepo Sample App running on devices
+
+**Vega Virtual Device**
+
+![Vega Virtual Device](docs/images/VegaVirtualDevice.png)
+
+
+**Android**
+
+![Android](docs/images/Android.png)
+
+**Apple iPhone**
+
+![iPhone](docs/images/iPhone.png)
+
+
+**Apple TV**
+
+![Apple TV](docs/images/AppleTV.png)
+
+
 
 
 ###  Prerequisites
@@ -40,11 +65,12 @@ Before you launch the sample app, make sure that you have the following installe
 
 **Important**: Vega development requires special configuration.
 
-1. [Install the Vega Developer Tools](https://developer.amazon.com/docs/vega/0.21/install-vega-sdk.html).
-2. [Configure Yarn](https://developer.amazon.com/docs/vega/0.21/configure-package-managers.html).
+1. [Install the Vega Developer Tools](https://developer.amazon.com/docs/vega/latest/install-vega-sdk.html).
+2. [Configure Yarn](https://developer.amazon.com/docs/vega/latest/configure-package-managers.html).
 
 
-## Build and run the app
+Build and run the app
+---------------------
 
 You can download the source code from GitHub to build and run the sample app for the following platforms and devices.
 
@@ -52,13 +78,13 @@ You can download the source code from GitHub to build and run the sample app for
 
 Install all workspace dependencies. Run the following command.
 
-```bash
+```
 yarn
 ```
 
 Install CocoaPods for iOS projects. Run the following command. 
 
-```bash
+```
 yarn workspaces foreach --all run pods
 ```
 
@@ -68,7 +94,7 @@ yarn workspaces foreach --all run pods
 
 To launch the app in an iOS environment, run the following command. 
 
-```bash
+```
 yarn workspace @rnmonorepo/mobile run ios
 ```
 
@@ -76,7 +102,7 @@ yarn workspace @rnmonorepo/mobile run ios
 
 To launch the app in an Android environment, run the following command. 
 
-```bash
+```
 yarn workspace @rnmonorepo/mobile run android
 ```
 
@@ -105,7 +131,7 @@ yarn workspace @rnmonorepo/mobile run android
    1. To start the Vega Virtual Device, at the command prompt, run the following command.
 
       ```
-      kepler device simulator start
+      vega virtual-device start
       ```
 
    2. To install and launch the app on the Vega Virtual Device, run the following command, depending on your device architecture.
@@ -113,13 +139,13 @@ yarn workspace @rnmonorepo/mobile run android
       - On Mac M-series based devices.   
 
         ```
-        kepler run-kepler vega/build/aarch64-release/vega_aarch64.vpkg
+        vega run-app vega/build/aarch64-release/vega_aarch64.vpkg
         ```
 
       - On x86_64 based devices.   
 
         ```
-        kepler run-kepler vega/build/x86_64-release/vega_x86_64.vpkg
+        vega run-app vega/build/x86_64-release/vega_x86_64.vpkg
         ```
  
    **Vega OS Fire TV Stick**
@@ -129,7 +155,7 @@ yarn workspace @rnmonorepo/mobile run android
    2. To install and launch the app on your Vega OS Fire TV Stick, run the following command.
 
       ```
-      kepler run-kepler vega/build/armv7-release/vega_armv7.vpkg
+      vega run-app vega/build/armv7-release/vega_armv7.vpkg
       ```
 
 #### Apple TV
@@ -156,10 +182,11 @@ yarn workspace @rnmonorepo/tvos run ios --simulator "Apple TV"
 
 ### Set up Fast Refresh for the Vega OS Fire TV Stick or Vega Virtual Device
 
-[Fast Refresh](https://reactnative.dev/docs/fast-refresh) is a React Native function that lets you see changes in your app without rebuilding. To set it up, see [Set Up Fast Refresh to Build Apps Using Vega CLI](https://developer.amazon.com/docs/vega/0.21/fast-refresh.html).
+[Fast Refresh](https://reactnative.dev/docs/fast-refresh) is a React Native function that lets you see changes in your app without rebuilding. To set it up, see [Set Up Fast Refresh to Build Apps Using Vega CLI](https://developer.amazon.com/docs/vega/latest/fast-refresh.html).
 
 
-## Set up your environment from scratch
+Set up your environment from scratch
+------------------------------------
 
 > **Note:** This project is already set up as a complete monorepo. The step-by-step setup instructions below are for reference only.
 
@@ -215,7 +242,7 @@ The following steps show you how to create separate projects for each platform, 
 1. To create your React Native for Vega project using the Vega CLI, run the following command. 
 
    ```
-   kepler project generate --template hello-world --name MonorepoSample --packageId com.amazondeveloper.monoreposample --outputDir vega
+   vega project generate --template hello-world --name MonorepoSample --packageId com.amazondeveloper.monoreposample --outputDir vega
    ```
 
 2. Update your **vega/package.json** file. 
@@ -263,11 +290,12 @@ The following steps show you how to create separate projects for each platform, 
 1. Open **Android Studio**.
 2. Go to **AVD Manager** (Virtual Device Manager).
 3. Create two virtual devices:
-   * **`android-mobile`** - for mobile development
-   * **`android-tv`** - for TV development
+   * **`android-mobile`** - for mobile development.
+   * **`android-tv`** - for TV development.
 
 
-## Create and configure shared code package
+Create and configure shared code package
+----------------------------------------
 
 1. To create the React Native shared library, run the following command.
 
@@ -382,7 +410,8 @@ const localStyles = StyleSheet.create({
 export default App;
 ```
 
-## Troubleshooting
+Troubleshooting
+---------------
 
 ### Android NDK error
 
@@ -413,7 +442,7 @@ emulator -avd <virtual-device-name>
 
 **Solution**: Ensure Vega CLI tools are installed and properly configured.
 
-[Vega CLI Installation](https://developer.amazon.com/docs/vega/0.21/install-vega-sdk.html)
+[Vega CLI Installation](https://developer.amazon.com/docs/vega/latest/install-vega-sdk.html)
 
 ### Fast Refresh troubleshooting
 
@@ -434,18 +463,20 @@ emulator -avd <virtual-device-name>
 **Solution**: Verify device architecture matches the .VPKG file. Run the following command. 
 
 ```
-kepler device info
+vega device info
 ```
 
-## Related topics
+Related topics
+--------------
 
 * [React Native Documentation](https://reactnative.dev/)
 * [React Native TvOS](https://github.com/react-native-tvos/react-native-tvos)
-* [Vega TV Developer Portal](https://developer.amazon.com/docs/vega/0.21/vega.html)
+* [Vega TV Developer Portal](https://developer.amazon.com/docs/vega/vega.html)
 * [Yarn Workspaces](https://yarnpkg.com/features/workspaces)
 
 
-## Release notes
+Release notes
+-------------
 
 ### v0.21
 
