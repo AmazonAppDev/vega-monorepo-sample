@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "vega",
+			"path": "../vega"
+		},
+		{
+			"path": "../../HelloSharedWorkspace/packages/vega"
+		}
+	],
+	"settings": {
+	}
+}
