@@ -1,0 +1,9 @@
+import React from 'react';
+import {ImageStyle} from 'react-native';
+
+export interface BannerLogoProps {
+  style?: ImageStyle;
+}
+
+// Default: no logo for base platform
+export const BannerLogo: React.FC<BannerLogoProps> | null = null;

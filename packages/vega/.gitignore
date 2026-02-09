@@ -1,0 +1,15 @@
+*.iml
+*.swp
+.idea
+.DS_Store
+.vscode
+.tmp
+
+dist
+build
+node_modules
+buildinfo.json
+CMakeUserPresets.json
+npm-debug.log
+.kiro/*
+yarnRefactoring

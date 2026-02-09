@@ -1,15 +1,52 @@
-# Build files
-node_modules
+# Dependencies
+node_modules/
 package-lock.json
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-# Other files
+# Vega build files
+packages/vega/buildinfo.json
+build/
+dist/
+*.vpkg
+*.bundle
+*.bundle.map
+*.hermes.bundle
+
+# Expo
+.expo/
+.expo-shared/
+
+# Native builds - Expo generated folders
+packages/expotv/android/
+packages/expotv/ios/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# IDE
 *.iml
 *.swp
-.idea
+.idea/
 .DS_Store
-.vscode
-.tmp
-npm-debug.log
+.vscode/
+.tmp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Kiro
+.kiro/
+
+# Misc
 prepareRelease.sh
-yarn.lock
-.yarn
+.vscode
