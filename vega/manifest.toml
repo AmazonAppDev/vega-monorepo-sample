@@ -6,7 +6,7 @@ schema-version = 1
 
 [package]
 title = "Sample App for React Native monorepo using Yarn workspaces"
-version = "0.1.0"
+version = "0.1.1"
 id = "com.amazondeveloper.monoreposample"
 icon = "@image/MonorepoApp.png"
 

@@ -1,6 +1,6 @@
 {
   "name": "@rnmonorepo/vega",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "files": [
     "dist"
   ],
@@ -20,11 +20,11 @@
     "release": "npm-run-all lint test build:app"
   },
   "dependencies": {
-    "@amazon-devices/react-native-gesture-handler": "*",
+    "@amazon-devices/react-native-gesture-handler": "~2.0.0",
     "@amazon-devices/react-native-kepler": "~2.0.0",
     "@amazon-devices/react-native-reanimated": "~2.0.0",
-    "@amazon-devices/react-native-safe-area-context": "*",
-    "@amazon-devices/react-native-screens": "*",
+    "@amazon-devices/react-native-safe-area-context": "~2.0.0",
+    "@amazon-devices/react-native-screens": "~2.0.0",
     "@amazon-devices/react-navigation__core": "~7.0.0",
     "@amazon-devices/react-navigation__drawer": "~7.0.0",
     "@amazon-devices/react-navigation__native": "~7.0.0",
@@ -35,7 +35,7 @@
     "react-native": "0.72.0"
   },
   "devDependencies": {
-    "@amazon-devices/kepler-cli-platform": "^0",
+    "@amazon-devices/kepler-cli-platform": "~0.22.0",
     "@react-native-community/cli": "11.3.2",
     "@react-native/eslint-config": "0.72.2",
     "@react-native/metro-config": "^0.72.6",
